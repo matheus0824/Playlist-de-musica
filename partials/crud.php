@@ -1,12 +1,12 @@
 <?php
 $host = "localhost";
 $port = 1433;
-$dbname = "musica";
+$dbname = "Musica";
 $username = "root";
 $password = "";
 
 try {
-    $pdo new PDO("mysql:host=$host;post=$port;dbname=$dbname", $username, $password);
+    $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     function create($pdo, $table, array $data) {
