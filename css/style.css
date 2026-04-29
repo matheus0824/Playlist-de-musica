@@ -1,0 +1,11 @@
+body{
+    background-color: #248d84;
+    
+}
+
+.tableline{
+    background-color: #b35b5b;
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 80%;
+}

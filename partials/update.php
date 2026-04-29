@@ -7,6 +7,7 @@ $dadosAtualizados = [
     'Nome da música' => 'Smells Like Teen Spirit',
     'autor' => 'Nirvana',
     'generos' => 'Rock'
+    'Data de inserção' => ''""
 ];
 
 $linhasAfetadas = update($pdo, 'Musica', $dadosAtualizados, 'id = '.$idMusica);

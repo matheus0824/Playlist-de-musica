@@ -1,11 +1,15 @@
 <?php
 
 require_once 'crud.php';
-print '<table border=1>
+
+
+print '<table border=1 class="tableline">
  <tr>
     <th>ID</th>
     <th>Música</th>
     <th>genero</th>
+    <th>Data de inserção</th>
+
 </tr>';
 
 $Musica = readAll($pdo, 'Musica');
@@ -15,7 +19,8 @@ foreach($Musica as $Musica) {
     echo "<tr><td>".
     $Musica['id']."</td><td>".
     $Musica['nome']."</td><td>".
-    $Musica['genero']."</td></tr>";
+    $Musica['genero']."</td><td>".
+    $Musica['datamusica']."</td></tr>";
 }
 
 print "</table>";

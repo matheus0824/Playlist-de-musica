@@ -5,6 +5,7 @@ $novaMusica = [
     'Nome da música' => 'Smells Like Teen Spirit',
     'autor' => 'Nirvana',
     'genero' => 'Rock'
+    'Data de inserção' => ''
 ];
 
 $idMusicaNova = create($pdo, 'Musica', $novaMusica);
