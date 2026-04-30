@@ -1,24 +1,28 @@
 <?php
-
 require_once 'crud.php';
-$Musica = readAll($pdo, 'musica');
 
+$musicas = readAll($pdo, 'musicas');
 
-print '<table border=1 class="tableline">
- <tr>
-    <th>ID</th>
-    <th>Música</th>
-    <th>genero</th>
-    <th>Ano</th>
-    <th>editar</th>
-</tr>';
+echo "<table border=1>";
+echo "<tr>
+<th>ID</th>
+<th>Título</th>
+<th>Artistas</th>
+<th>Gênero</th>
+<th>Ano</th>
+<th>Favorita</th>
+</tr>";
 
-foreach($Musica as $Musica) {
-    echo "<tr><td>".
-    $Musica['id']."</td><td>".
-    $Musica['nome']."</td><td>".
-    $Musica['genero']."</td><td>".
-    $Musica['datamusica']."</td></tr>";
+foreach ($musicas as $m) {
+    echo "<tr>
+    <td>{$m['id']}</td>
+    <td>{$m['titulo']}</td>
+    <td>{$m['artistas']}</td>
+    <td>{$m['genero']}</td>
+    <td>{$m['ano']}</td>
+    <td>{$m['favorita']}</td>
+    </tr>";
 }
 
-print "</table>";
+echo "</table>";
+

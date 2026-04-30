@@ -1,54 +1,47 @@
+<?php
+require_once 'crud.php';
+
+$musicas = readAll($pdo, 'musicas');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Musicfy</title>
+<meta charset="UTF-8">
+<title>Minha Playlist</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Música</th>
-            <th>genero</th>
-            <th>Data de inserção</th>
-            <th>Editar</th>
-        </tr>
-    </thead>
-
-    <?php
-      foreach($Musica as $M) : 
-    ?>
+<h1>Minha Playlist</h1>
+<a href="form.php" class="add">Nova Música</a>
+<table>
     <tr>
-        <td><?= $M['id'] ?></td>
-        <td><?= $M['nome'] ?></td>
-        <td><?= $M['genero'] ?></td>
-        <td><?= $Musica['datamusica'] ?></td>
-        <td><a href="edit.php?id=<?= $M['id'] ?>">Editar</a></td>
-    
-    <td>
-        <?= $M['id'] ?>
-    </td>
-      
-    <td>
-        <a href="edit.php?id=<?= $M['id'] ?>" class="Editar">Editar</a>
-        <a href="delete.php?id=<?= $M['id'] ?>" class="Excluir">Exluir</a>
-    </td>
-    </tr>
-    <?php
-      endforeach;
-    ?>
-    <header>
-        <?php
-        include 'partials/header.php';
-        ?>
-    </header>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Artista</th>
+        <th>Gênero</th>
+        <th>Ano</th>
+        <th>Favorita</th>
+        <th>Ações</th>
+</tr>
 
-    <main>
-        <?php
-        include 'partials/select.php';
-        ?>
-    </main>
+<?php foreach ($musicas as $m): ?>
+    <tr>
+        <td><?= $m['id'] ?></td>
+        <td><?= $m['titulo'] ?></td>
+        <td><?= $m['artista'] ?></td>
+        <td><?= $m['genero'] ?></td>
+        <td><?= $m['ano'] ?></td>
+<td>
+    <?= $m['favorita'] ? '⭐' : '☆' ?>
+</td>
+
+<td>
+    <a href="edit.php?id=<?= $m['id'] ?>" class="edit">Editar</a>
+    <a href="delete.php?id=<?= $m['id'] ?>" class="delete">Excluir</a>
+</td>
+</tr>
+<?php endforeach; ?>
+
+</table>
 </body>
 </html>

@@ -1,37 +1,100 @@
-body{
-    background-color: #252525;
-    
-}
-
-.tableline{
-    background-color: #c0bfbf;
-    border-collapse: collapse;
-    margin: 20px auto;
-    width: 80%;
-}
-
-/*HEADER*/
-
-header {
-    background: #f1f1f1;
-    padding: 10px;
-}
-
-.home {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.home a {
-    color: #050505;
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.add {
+    background: #1db954;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.add:hover {
+    background: #17a44c;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 85%;
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background: #1db954;
+}
+
+tr:hover {
+    background: #2a2a2a;
+}
+
+.delete {
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.delete:hover {
+    background: darkred;
+}
+
+.form {
+    background: #1e1e1e;
+    padding: 25px;
+    width: 320px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.form input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form label {
+    font-size: 14px;
+}
+
+.form button:hover {
+    background: #17a44c;
+}
+
+a {
+    color: #1db954;
     text-decoration: none;
-    font-weight: bold;
 }
 
-.home a:hover {
+a:hover {
     text-decoration: underline;
+}
+form {
+    margin-bottom: 20px;
 }

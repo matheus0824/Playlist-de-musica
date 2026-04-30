@@ -1,9 +1,9 @@
 <?php
 require_once 'crud.php';
 
-$idMusica = $_GET['id'];
+$id = $_GET['id'];
 
-$deleted = delete($pdo, 'musica', 'id = '.$idMusica);
+delete($pdo, 'musicas', "id = $id");
 
-header('Location: index.php');
-exit; 
+header("Location: index.php");
+exit;
