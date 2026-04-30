@@ -1,11 +1,37 @@
 body{
-    background-color: #248d84;
+    background-color: #252525;
     
 }
 
 .tableline{
-    background-color: #b35b5b;
+    background-color: #c0bfbf;
     border-collapse: collapse;
     margin: 20px auto;
     width: 80%;
+}
+
+/*HEADER*/
+
+header {
+    background: #f1f1f1;
+    padding: 10px;
+}
+
+.home {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.home a {
+    color: #050505;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home a:hover {
+    text-decoration: underline;
 }

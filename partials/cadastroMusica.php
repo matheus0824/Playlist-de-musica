@@ -5,6 +5,7 @@
     <input type="text" id="artista" name="artista"><br><br>
     <label for="genero">Gênero:</label>
     <input type="text" id="genero" name="genero"><br><br>
+    <label for="url">URL da Música:</label>
     <input type="url" id="url" name="url"><br><br>
     <input type="submit" value="Cadastrar">
 </form>

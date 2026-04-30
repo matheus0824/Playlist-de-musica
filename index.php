@@ -8,7 +8,9 @@
 </head>
 <body>
     <header>
-        
+        <?php
+        include 'partials/header.php';
+        ?>
     </header>
 
     <main>
@@ -16,9 +18,5 @@
         include 'partials/select.php';
         ?>
     </main>
-
-    <footer>
-
-    </footer>
 </body>
 </html>

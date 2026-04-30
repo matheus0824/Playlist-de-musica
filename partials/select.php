@@ -8,7 +8,9 @@ print '<table border=1 class="tableline">
     <th>ID</th>
     <th>Música</th>
     <th>genero</th>
-    <th>Data de inserção</th>
+    <th>Data de <br> inserção</th>
+    <th>editar</th>
+
 
 </tr>';
 
@@ -21,6 +23,9 @@ foreach($Musica as $Musica) {
     $Musica['nome']."</td><td>".
     $Musica['genero']."</td><td>".
     $Musica['datamusica']."</td></tr>";
+
+
+    
 }
 
 print "</table>";
