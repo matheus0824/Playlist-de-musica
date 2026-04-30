@@ -1,13 +1,13 @@
 <?php
 require_once 'crud.php';
 
-$idMusica = 674;
+$idMusica = $_GET['id'];
 
 $dadosAtualizados = [
-    'Nome da música' => 'Smells Like Teen Spirit',
-    'autor' => 'Nirvana',
-    'generos' => 'Rock'
-    'Data de inserção' => ''""
+    'Nome da música' => $_POST['nome'],
+    'autor' =>  $_POST['autor'],
+    'genero' =>  $_POST['genero']
+    'Ano' =>  $_POST['datamusica']
 ];
 
 $linhasAfetadas = update($pdo, 'Musica', $dadosAtualizados, 'id = '.$idMusica);
@@ -17,3 +17,6 @@ if ($linhasAfetadas > 0) {
 } else {
     echo 'Não foi possível atualizar a Música!';
 }
+
+header('Location: index.php');
+exit;

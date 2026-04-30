@@ -2,11 +2,12 @@
 require_once 'crud.php';
 
 $novaMusica = [
-    'Nome da música' => 'Smells Like Teen Spirit',
-    'autor' => 'Nirvana',
-    'genero' => 'Rock'
-    'Data de inserção' => ''
+    'Nome da música' => $_POST['nome'],
+    'autor' =>  $_POST['autor'],
+    'genero' =>  $_POST['genero']
+    'Data de inserção' =>  $_POST['datamusica']
 ];
 
 $idMusicaNova = create($pdo, 'Musica', $novaMusica);
-echo 'Nova música inserida: ' . $idMusicaNova;
+header('Location: index.php');
+exit;

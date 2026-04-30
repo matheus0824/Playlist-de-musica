@@ -1,12 +1,9 @@
 <?php
 require_once 'crud.php';
 
-$idMusica = 674;
+$idMusica = $_GET['id'];
 
 $deleted = delete($pdo, 'musica', 'id = '.$idMusica);
 
-if ($deleted) {
-    echo 'Música deletada com sucesso!';
-} else {
-    echo 'Não foi possível deletar a música!!!';
-}
+header('Location: index.php');
+exit; 
