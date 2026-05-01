@@ -5,96 +5,147 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
     background: #121212;
     color: white;
     text-align: center;
-}
-
-h1 {
-    margin: 20px 0;
-}
-
-.add {
-    background: #1db954;
-    color: white;
-    padding: 10px 15px;
-    display: inline-block;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    transition: 0.3s;
-}
-
-.add:hover {
-    background: #17a44c;
+    padding: 40px 20px;
 }
 
 table {
-    margin: auto;
+    margin: 0 auto; 
     border-collapse: collapse;
-    width: 85%;
+    width: 90%;
+    max-width: 1000px;
     background: #1e1e1e;
-    border-radius: 10px;
     overflow: hidden;
 }
 
 th, td {
-    padding: 12px;
+    padding: 15px;
     border-bottom: 1px solid #333;
 }
 
 th {
-    background: #1db954;
+    background: #007bff;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
 tr:hover {
     background: #2a2a2a;
 }
 
-.delete {
-    background: red;
+.add {
+    background: #007bff;
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.delete:hover {
-    background: darkred;
+.add:hover {
+    background: #0056b3;
+}
+
+.delete {
+    background: #0056b3;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+}
+
+.edit {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: bold;
 }
 
 .form {
     background: #1e1e1e;
     padding: 25px;
-    width: 320px;
-    margin: auto;
-    border-radius: 10px;
-    margin-top: 20px;
+    width: 350px;
+    margin: 20px auto;
 }
 
-.form input {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 10px;
+button {
+    background: #007bff;
+    color: white;
     border: none;
-    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
 }
 
-.form label {
+button:hover {
+    background: #0056b3;
+}
+
+
+
+/*Form*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #121212;
+    color: white;
+}
+
+.form-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-form {
+    background: #007bff;
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+}
+
+.card-form h2 {
+    margin-bottom: 20px;
+}
+
+.card-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+}
+
+.card-form button {
+    background: #121212;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.card-form button:hover {
+    background: #2a2a2a;
+}
+
+.back-link {
+    display: block;
+    margin-top: 15px;
+    color: white;
+    text-decoration: none;
     font-size: 14px;
 }
 
-.form button:hover {
-    background: #17a44c;
-}
-
-a {
-    color: #1db954;
-    text-decoration: none;
-}
-
-a:hover {
+.back-link:hover {
     text-decoration: underline;
-}
-form {
-    margin-bottom: 20px;
 }

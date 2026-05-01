@@ -2,15 +2,17 @@
 require_once 'crud.php';
 
 $id = $_POST['id'];
+$ano = $_POST['ano'];
+
+$data_formatada = $ano . "-01-01";
 
 $dados = [
-    'titulo' => $_POST['titulo'],
-    'artista' => $_POST['artista'],
+    'nome' => $_POST['titulo'],
     'genero' => $_POST['genero'],
-    'ano' => $_POST['ano'],
-    'favorita' => isset($_POST['favorita']) ? 1 : 0
+    'datamusica' => $data_formatada
 ];
 
-update($pdo, 'musicas', $dados, "id = $id");
-header("Location: index.php");
+update($pdo, 'musica', $dados, "id = $id");
+
+header("Location: ../index.php");
 exit;

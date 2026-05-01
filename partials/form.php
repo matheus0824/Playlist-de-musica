@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="css/style.css">
-<title>Nova Música</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Nova Música</title>
 </head>
-<body>
-<h1>Nova Música</h1>
-<form method="POST" action="insert.php" class="form">
-    <input type="text" name="titulo" placeholder="Título" required><br><br>
-    <input type="text" name="artista" placeholder="Artista" required><br><br>
-    <input type="text" name="genero" placeholder="Gênero"><br><br>
-    <input type="number" name="ano" placeholder="Ano" min="1900" max="2100"><br><br>
-    <button type="submit">Salvar</button>
-</form>
-<br>
-<a href="index.php">Voltar</a>
-
+<body class="form-page">
+    <div class="card-form">
+        <h2>Nova Música</h2>
+        <form method="POST" action="insert.php">
+            <label for="titulo">Nome da musica</label>
+            <input type="text" name="titulo" placeholder="Nome da Música" required>
+            <input type="text" name="artista" placeholder="Artista" required>
+            <input type="text" name="genero" placeholder="Gênero">
+            <input type="text" name="ano" placeholder="data" min="1900" max="210000000000">
+            <button type="submit">Salvar Música</button>
+        </form>
+        <a href="../index.php" class="back-link">Voltar</a>
+    </div>
 </body>
 </html>
-
